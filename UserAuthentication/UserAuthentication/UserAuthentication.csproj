@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.3;net461</TargetFrameworks>
+    <AssemblyName>UserAuthentication</AssemblyName>
+    <RootNamespace>UserAuthentication</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <ProjectReference Include="..\UserAuthentication.Store.Database\UserAuthentication.Store.Database.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UserAuthentication.Core\UserAuthentication.Core.csproj" />
+    <ProjectReference Include="..\UserAuthentication.Store.File\UserAuthentication.Store.File.csproj" />
+  </ItemGroup>
+
+</Project>
